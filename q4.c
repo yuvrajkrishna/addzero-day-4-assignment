@@ -3,18 +3,19 @@
 int main() {
 
     int n = 634787;
+    int max = 0;
 
-    int max = 0 ;
-    
-    while(n > 0){
-        if(max < n % 10){
-            max = n % 10;
+    while (n > 0) {
+        int digit = n % 10;
+
+        if (digit > max) {
+            max = digit;
         }
-        n/=10;
+
+        n /= 10;
     }
-    printf("%d is largest digit", max);
-    
+
+    printf("%d is the largest digit", max);
 
     return 0;
-
 }
